@@ -9,10 +9,11 @@ export default function EmergencyBar() {
       role="banner"
       aria-label="Emergency Contact Information"
       className="
-        sticky top-0 z-50
         border-b border-red-800/30
         bg-red-700
         text-white
+        hidden
+        md:block
       "
     >
       <div

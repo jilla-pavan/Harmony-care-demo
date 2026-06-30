@@ -49,7 +49,7 @@ export default function Navbar() {
     <header
       role="banner"
       className={`
-        sticky top-[56px] z-40
+        relative z-40
         transition-all duration-300
         p-2
         ${
@@ -204,8 +204,9 @@ export default function Navbar() {
               exit={{ opacity: 0 }}
               onClick={() => setMenuOpen(false)}
               className="
-                fixed inset-0
-                top-[128px]
+                absolute inset-x-0
+                top-full
+                h-screen
                 bg-black/20
                 backdrop-blur-sm
                 lg:hidden
@@ -219,7 +220,10 @@ export default function Navbar() {
               exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.2 }}
               className="
-                absolute left-0 right-0
+                absolute inset-x-0 top-full
+                z-50
+                max-h-[calc(100vh-100%)]
+                overflow-y-auto
                 border-t border-slate-100
                 bg-white
                 shadow-xl

@@ -112,7 +112,7 @@ export default function ContactSection() {
             "
           >
             We're here whenever
-            <br className="hidden sm:block" />
+            {" "}<br className="hidden sm:block" />
             you need us.
           </h2>
 

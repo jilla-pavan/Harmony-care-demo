@@ -60,7 +60,7 @@ export default function FacilitiesSection() {
             "
           >
             Modern infrastructure
-            <br className="hidden sm:block" />
+            {" "}<br className="hidden sm:block" />
             designed for better outcomes.
           </h2>
 

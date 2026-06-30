@@ -99,7 +99,7 @@ export default function AppointmentSection() {
               "
             >
               Schedule your visit
-              <br className="hidden sm:block" />
+              {" "}<br className="hidden sm:block" />
               in minutes.
             </h2>
 

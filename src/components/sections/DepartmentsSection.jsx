@@ -68,7 +68,7 @@ export default function DepartmentsSection() {
 
           <h2 className="mt-6 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
             Comprehensive care
-            <br className="hidden sm:block" />
+            {" "}<br className="hidden sm:block" />
             across every stage of life.
           </h2>
 

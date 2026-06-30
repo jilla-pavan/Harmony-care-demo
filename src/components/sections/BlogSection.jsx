@@ -44,7 +44,7 @@ export default function BlogSection() {
             "
           >
             Insights from
-            <br className="hidden sm:block" />
+            {" "}<br className="hidden sm:block" />
             our medical experts.
           </h2>
 

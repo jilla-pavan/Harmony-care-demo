@@ -50,7 +50,7 @@ export default function FAQSection() {
             "
           >
             Answers to common
-            <br className="hidden sm:block" />
+            {" "}<br className="hidden sm:block" />
             patient questions.
           </h2>
 

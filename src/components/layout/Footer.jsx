@@ -260,12 +260,14 @@ export default function Footer() {
             flex
             flex-col
             gap-4
-            py-6
+            pt-6
+            pb-28
             text-xs
             text-slate-500
             md:flex-row
             md:items-center
             md:justify-between
+            md:pb-6
           "
         >
           <p>

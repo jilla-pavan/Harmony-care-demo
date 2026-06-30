@@ -49,7 +49,7 @@ export default function TestimonialsSection() {
             "
           >
             Trusted by families
-            <br className="hidden sm:block" />
+            {" "}<br className="hidden sm:block" />
             across Hyderabad.
           </h2>
 

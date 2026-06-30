@@ -43,7 +43,7 @@ export default function InsuranceSection() {
             "
           >
             Cashless treatment,
-            <br className="hidden sm:block" />
+            {" "}<br className="hidden sm:block" />
             hassle-free claims.
           </h2>
 

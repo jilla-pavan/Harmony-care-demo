@@ -54,7 +54,7 @@ export default function DoctorsSection() {
             "
           >
             Experts dedicated
-            <br className="hidden sm:block" />
+            {" "}<br className="hidden sm:block" />
             to your wellbeing.
           </h2>
 

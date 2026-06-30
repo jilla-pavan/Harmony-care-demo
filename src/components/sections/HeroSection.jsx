@@ -24,13 +24,12 @@ export default function HeroSection() {
         <div
           className="
             grid
-            min-h-[calc(100vh-130px)]
             items-center
             gap-12
-            py-12
-            sm:py-16
+            py-8
             lg:grid-cols-2
             lg:gap-16
+            lg:min-h-[calc(100svh-160px)]
             lg:py-20
           "
         >
