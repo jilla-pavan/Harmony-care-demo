@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  PhoneCall,
-  Clock3,
-  MapPin,
-  Ambulance,
-  ChevronRight,
-} from "lucide-react";
+import { PhoneCall, Clock3, Ambulance } from "lucide-react";
 
 import { HOSPITAL_INFO } from "../../data/mockData.js";
 
@@ -14,81 +8,119 @@ export default function EmergencyBar() {
     <aside
       role="banner"
       aria-label="Emergency Contact Information"
-      className="relative z-50 overflow-hidden border-b border-white/10 bg-gradient-to-r from-rose-700 via-red-700 to-rose-800 text-white shadow-2xl"
+      className="
+        sticky top-0 z-50
+        border-b border-red-800/30
+        bg-red-700
+        text-white
+      "
     >
-      {/* Premium background effects */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute -left-20 top-0 h-40 w-40 rounded-full bg-white blur-3xl" />
-        <div className="absolute right-0 top-0 h-32 w-32 rounded-full bg-red-300 blur-3xl" />
-      </div>
-
-      <div className="container-custom relative flex min-h-[56px] flex-col items-center justify-between gap-3 py-3 lg:flex-row">
-        {/* Left Section */}
-        <div className="flex flex-wrap items-center justify-center gap-4 lg:justify-start">
-          {/* Emergency Badge */}
-          <div className="flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 backdrop-blur-md">
-            <Ambulance size={15} className="text-red-100" />
-
-            <span className="font-semibold tracking-wide">
-              24/7 Emergency Services
-            </span>
-          </div>
-
-          {/* Divider */}
-          <div className="hidden h-5 w-px bg-white/20 lg:block" />
-
-          {/* Timing */}
-          <div className="flex items-center gap-2 text-red-50">
-            <Clock3 size={15} />
-
-            <span className="font-medium">Open 24 Hours • 365 Days</span>
-          </div>
-        </div>
-
-        {/* Right Section */}
-        <div className="flex flex-wrap items-center justify-center gap-5">
-          {/* Address */}
-          <div className="hidden items-center gap-2 text-sm text-red-100 xl:flex">
-            <MapPin size={15} />
-
-            <span className="max-w-xs truncate">{HOSPITAL_INFO.address}</span>
-          </div>
-
-          {/* Emergency CTA */}
-          <a
-            href={`tel:${HOSPITAL_INFO.emergency.replace(/\s/g, "")}`}
-            aria-label={`Call emergency number ${HOSPITAL_INFO.emergency}`}
+      <div
+        className="
+          container-custom
+          flex
+          flex-col
+          gap-3
+          py-3
+          sm:flex-row
+          sm:items-center
+          sm:justify-between
+        "
+      >
+        {/* Left Content */}
+        <div
+          className="
+            flex
+            flex-wrap
+            items-center
+            justify-center
+            gap-3
+            sm:justify-start
+          "
+        >
+          <div
             className="
-              group
-              flex
+              inline-flex
               items-center
-              gap-3
+              gap-2
               rounded-full
-              bg-white
-              px-5
-              py-2
-              font-bold
-              text-red-700
-              shadow-xl
-              transition-all
-              duration-300
-              hover:-translate-y-0.5
-              hover:shadow-2xl
+              bg-white/10
+              px-3
+              py-1.5
+              text-xs
+              font-semibold
+              backdrop-blur-sm
             "
           >
-            <PhoneCall
-              size={16}
-              className="transition-transform duration-300 group-hover:rotate-12"
-            />
+            <Ambulance size={14} />
 
-            <span>{HOSPITAL_INFO.emergency}</span>
+            <span>24/7 Emergency Care</span>
+          </div>
 
-            <ChevronRight
-              size={14}
-              className="transition-transform duration-300 group-hover:translate-x-1"
-            />
-          </a>
+          <div
+            className="
+              hidden
+              h-4
+              w-px
+              bg-white/20
+              md:block
+            "
+          />
+
+          <div
+            className="
+              flex
+              items-center
+              gap-2
+              text-sm
+              text-red-100
+            "
+          >
+            <Clock3 size={14} />
+
+            <span>Open 24 Hours</span>
+          </div>
         </div>
+
+        {/* Emergency CTA */}
+        <a
+          href={`tel:${HOSPITAL_INFO.emergency.replace(/\s/g, "")}`}
+          aria-label={`Call emergency number ${HOSPITAL_INFO.emergency}`}
+          className="
+            group
+            mx-auto
+            flex
+            w-full
+            items-center
+            justify-center
+            gap-2
+            rounded-full
+            bg-white
+            px-5
+            py-2.5
+            text-sm
+            font-semibold
+            text-red-700
+            shadow-sm
+            transition-all
+            duration-300
+            hover:-translate-y-0.5
+            hover:shadow-md
+            sm:mx-0
+            sm:w-auto
+          "
+        >
+          <PhoneCall
+            size={16}
+            className="
+              transition-transform
+              duration-300
+              group-hover:rotate-12
+            "
+          />
+
+          <span>{HOSPITAL_INFO.emergency}</span>
+        </a>
       </div>
     </aside>
   );

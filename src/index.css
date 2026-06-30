@@ -7,16 +7,23 @@
     scroll-behavior: smooth;
   }
   body {
-    font-family: 'Inter', sans-serif;
-    background-color: #F8FBFF;
-    color: #1F2937;
+    font-family: "Inter", sans-serif;
+    background-color: #f8fbff;
+    color: #1f2937;
     -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', sans-serif;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Poppins", sans-serif;
   }
   @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       animation-duration: 0.01ms !important;
       transition-duration: 0.01ms !important;
     }
@@ -55,10 +62,10 @@
 
 /* Swiper custom styles */
 .swiper-pagination-bullet {
-  background: #0B5ED7 !important;
+  background: #0b5ed7 !important;
 }
 .swiper-pagination-bullet-active {
-  background: #0B5ED7 !important;
+  background: #0b5ed7 !important;
 }
 
 .testimonial-track {
@@ -110,7 +117,7 @@
   .testimonial-card {
     width: 280px;
     min-height: 260px;
-    padding: 1.5rem;
+    padding: 3rem;
   }
 
   .testimonial-track {
