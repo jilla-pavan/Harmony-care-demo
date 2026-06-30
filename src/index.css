@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F8FBFF;
+    color: #1F2937;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white font-semibold px-6 py-3 rounded-full hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+  .btn-outline {
+    @apply border-2 border-primary text-primary font-semibold px-6 py-3 rounded-full hover:bg-primary hover:text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+  .btn-teal {
+    @apply bg-teal-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-teal-600 transition-colors duration-200;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300;
+  }
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .section-label {
+    @apply text-primary font-semibold text-sm tracking-widest uppercase;
+  }
+  .section-title {
+    @apply font-heading font-bold text-3xl md:text-4xl text-textMain leading-tight;
+  }
+  .section-subtitle {
+    @apply text-muted text-lg leading-relaxed;
+  }
+}
+
+/* Swiper custom styles */
+.swiper-pagination-bullet {
+  background: #0B5ED7 !important;
+}
+.swiper-pagination-bullet-active {
+  background: #0B5ED7 !important;
+}
+
+.testimonial-track {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: testimonial-scroll 45s linear infinite;
+}
+
+.testimonial-track:hover {
+  animation-play-state: paused;
+}
+
+.testimonial-card {
+  width: 340px;
+  min-height: 280px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 2rem;
+
+  border: 1px solid rgb(226 232 240);
+  border-radius: 28px;
+
+  background: white;
+
+  transition:
+    transform 300ms ease,
+    border-color 300ms ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  border-color: rgb(203 213 225);
+}
+
+@keyframes testimonial-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    width: 280px;
+    min-height: 260px;
+    padding: 1.5rem;
+  }
+
+  .testimonial-track {
+    animation-duration: 35s;
+  }
+}
